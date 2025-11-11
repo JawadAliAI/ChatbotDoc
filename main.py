@@ -28,9 +28,20 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 @app.get("/")
 def serve_home():
     return FileResponse("index.html")
+
+# Serve CSS
+@app.get("/style.css")
+def serve_css():
+    return FileResponse("style.css")
+
+# Serve JS
+@app.get("/script.js")
+def serve_js():
+    return FileResponse("script.js")
 # =====================================================
 # DOCTOR SYSTEM PROMPT
 # =====================================================
@@ -372,3 +383,4 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
