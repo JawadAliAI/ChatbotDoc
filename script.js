@@ -18,7 +18,7 @@ let userMessage = null;
 const inputInitHeight = chatInput.scrollHeight;
 
 // API configuration - Update this to your FastAPI backend URL
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "https://doctor-ai-shlm.onrender.com";
 
 // Session management
 let sessionId = null;
@@ -444,4 +444,5 @@ chatbotToggler.addEventListener("click", () => {
 
 console.log("Script loaded");
 checkSavedPatient();
+
 showPatientModal();
